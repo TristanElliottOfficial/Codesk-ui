@@ -12,7 +12,8 @@
         <!--Menu Links Start-->
         <h4>General</h4>
         <div>
-          <a href="#">Home</a>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
           <a href="#">Friends</a>
           <a href="#">Messages</a>
           <a href="#">Notifications</a>
@@ -30,57 +31,48 @@
       <div>
         <header>
           <!--Main Top Navigation Start-->
-            <nav>
-              <!--Search Input Start-->
-              <div>
-                <form>
-                  <div>
-                    <label for="search">Search Here</label>
-                    <input type="text" name="search" id="search" placeholder="Search ...">
-                  </div>
-                </form>
-              </div>
-              <!--Search Input End-->
-              <!--Account Information Start-->
-              <div class="nav-dropdown">
-                <span class="dropdown-button">Username</span>
-                <ul>
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Friends</a></li>
-                  <li><a href="#">Messages</a></li>
-                  <li><a href="#">Logout</a></li>
-                </ul>
-              </div>
-              <!--Account Information End-->
-            </nav>
+          <nav>
+            <!--Search Input Start-->
+            <div>
+              <form>
+                <div>
+                  <label for="search">Search Here</label>
+                  <input type="text" name="search" id="search" placeholder="Search ...">
+                </div>
+              </form>
+            </div>
+            <!--Search Input End-->
+            <!--Account Information Start-->
+            <div class="nav-dropdown">
+              <span class="dropdown-button">Username</span>
+              <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+            <!--Account Information End-->
+          </nav>
           <!--Main Top Navigation End-->
         </header>
         <main>
-        <!--Main Content Start-->
-          <h1>Main Content</h1>
-        <!--Main Content End-->
+          <!--Main Content Start-->
+          <router-view/>
+          <!--Main Content End-->
         </main>
         <footer>
-        <!--Main Footer Start-->
+          <!--Main Footer Start-->
           <p>All rights reserved <a href="http://tristanelliott.co.za">Tristan Elliott</a></p>
-        <!--Main Footer End-->
+          <!--Main Footer End-->
         </footer>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-
-
-export default {
-  name: 'App',
-  components: {
-    // Component Import
-  }
-}
-</script>
-
 <style>
-
+body {
+  background-color: #eee;
+}
 </style>
